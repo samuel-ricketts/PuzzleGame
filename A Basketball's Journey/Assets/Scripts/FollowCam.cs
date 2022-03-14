@@ -3,7 +3,7 @@ using System.Collections;
 public class FollowCam : MonoBehaviour {
 static public GameObject POI; 
 [Header("Set in Inspector")]
-public float easing = 0.05f;
+public float easing = 10f;
 public Vector2 minXY = Vector2.zero;
 
 [Header("Set Dynamically")]

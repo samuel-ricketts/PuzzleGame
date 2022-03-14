@@ -37,11 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Basket.cs" />
-     <Compile Include="Assets\Scripts\Platforms.cs" />
-     <Compile Include="Assets\Scripts\PowerUps.cs" />
-     <Compile Include="Assets\Scripts\Basketball.cs" />
-     <Compile Include="Assets\Scripts\SecretSphere.cs" />
      <Compile Include="Assets\Scripts\FollowCam.cs" />
+     <Compile Include="Assets\Scripts\Basketball.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Testing Scripts\AddPoint.cs" />
+     <Compile Include="Assets\Scripts\Canvas Managers\StartCanvas.cs" />
+     <Compile Include="Assets\Scripts\Canvas Managers\EndCanvas.cs" />
+     <Compile Include="Assets\Scripts\Canvas Managers\HUDCanvas.cs" />
+     <Compile Include="Assets\Scripts\Orbs.cs" />
+     <Compile Include="Assets\Scripts\Platform.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

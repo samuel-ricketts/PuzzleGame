@@ -8,6 +8,7 @@ public class Basketball : MonoBehaviour
     public GameObject basketballPrefab;
     public float jumpforce = 10;
     Rigidbody rb;
+    public float ballSpeed = 100f;
     void Start()
     {
         rb = basketballPrefab.GetComponent<Rigidbody>();
@@ -22,12 +23,14 @@ public class Basketball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float mousePositionX = mousePosition.x;
-        basketballPrefab.transform.position = new Vector3(mousePositionX, basketballPrefab.transform.position.y, basketballPrefab.transform.position.z);
+       float xDirection = Input.GetAxis("Horizontal");
+       float zDirection = Input.GetAxis("Vertical");
+       Vector3 moveDirection = new Vector3(xDirection, 0.0f, zDirection);
+       rb.MovePosition(basketballPrefab.transform.position + moveDirection * ballSpeed);
+       
+       
         float speed = basketballPrefab.GetComponent<Rigidbody>().velocity.magnitude;
-        if (Input.GetButtonDown("Jump") && speed < 0.1f)
+        if (Input.GetMouseButtonDown(0) && speed < 0.1f)
             {
 
                 rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
